@@ -21,7 +21,11 @@ Button.prototype.render = function(buffer) {
   if (opts.postNumber) { buffer.push(" data-post-number=\"" + opts.postNumber + "\""); }
   buffer.push(" data-action=\"" + this.action + "\">");
   if (this.icon) { buffer.push("<i class=\"fa fa-" + this.icon + "\"></i>"); }
-  if (opts.textLabel) { buffer.push(I18n.t(opts.textLabel)); }
+  if (opts.dataLabel) {
+    buffer.push("<span class=\"label\">" + opts.textLabel + "</span>");
+  } else {
+    if (opts.textLabel) { buffer.push(I18n.t(opts.textLabel)); }
+  }
   if (opts.innerHTML) { buffer.push(opts.innerHTML); }
   buffer.push("</button>");
 };
@@ -234,13 +238,22 @@ export default Discourse.View.extend({
   // Reply button
   buttonForReply: function() {
     if (!this.get('controller.model.details.can_create_post')) return;
-    var options = {className: 'create'};
+    var options = {className: 'create-comment'};
 
-    if(!Discourse.Mobile.mobileView) {
-      options.textLabel = 'topic.reply.title';
+    // if(!Discourse.Mobile.mobileView) {
+    //   options.textLabel = 'topic.reply.title';
+    // }
+    var post = this.get('post');
+    var reply_count = post.get('reply_count');
+
+    options.dataLabel = true;
+    if(reply_count) {
+      options.textLabel = reply_count;
+    } else {
+      options.textLabel = '+';
     }
 
-    return new Button('reply', 'post.controls.reply', 'reply', options);
+    return new Button('reply', 'post.controls.reply', 'comment', options);
   },
 
   clickReply: function(post) {
