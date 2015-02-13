@@ -1,0 +1,42 @@
+<div class='landing'>
+  <section class="hero-section">
+    <div class="container">
+      <ul class="sections-nav">
+        <li>
+          {{#link-to 'discovery.top'}}
+            {{fa-icon 'comments'}}
+            Join the Discussion
+          {{/link-to}}
+        </li>
+        <li>
+          <a {{bind-attr href="linkToTableOfContent"}}>
+            {{fa-icon 'book'}}
+            Read the Book
+          </a>
+        </li>
+        <li>
+          {{#link-to 'communities'}}
+            {{fa-icon 'map-marker'}}Find Local Chapters
+          {{/link-to}}
+        </li>
+      </ul>
+      <h1 class="section-title">
+        A new approach to
+        <br>
+        software security
+      </h1>
+      <p class="section-description">
+        (by developers for developers)
+      </p>
+    </div>
+  </section>
+  <section class='top-section'>
+    <a class='section-anchor' name='discussions' id='discussions'></a>
+    <div class='container'>
+      <h2>Top discussions</h2>
+      {{#if model}}
+        {{ topic-list topics=model }}
+      {{/if}}
+    </div>
+  </section>
+</div>

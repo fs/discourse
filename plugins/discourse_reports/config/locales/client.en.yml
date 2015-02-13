@@ -1,0 +1,102 @@
+# encoding: utf-8
+# This file contains content for the client portion of Discourse, sent out
+# to the Javascript app.
+#
+# To work with us on translations, see:
+# https://www.transifex.com/projects/p/discourse-org/
+#
+# This is a "source" file, which is used by Transifex to get translations for other languages.
+# After this file is changed, it needs to be pushed by a maintainer to Transifex:
+#
+#   tx push -s
+#
+# Read more here: https://meta.discourse.org/t/contribute-a-translation-to-discourse/14882
+#
+# To validate this YAML file after you change it, please paste it into
+# http://yamllint.com/
+
+en:
+  js:
+    static:
+      terms_of_use:
+        title: "Terms of Use"
+      supporters:
+        title: "Supporters"
+      privacy_policy:
+        title: "Privacy Policy"
+      contributors:
+        title: "Contributors"
+      communities:
+        title: "Communities"
+      contact:
+        title: "Contact"
+      about_site:
+        title: "About Continuous Security"
+    coming_soon: "Coming soon"
+    composer:
+      position_placeholder: "Position in a Chapter"
+    footer:
+      links:
+        terms_of_use: "Terms of Use"
+        privacy_policy: "Privacy Policy"
+        contact: "Contact"
+    navigation:
+      resources:
+        title: "Free Book"
+        toc: "Browse the TOC"
+      discussions:
+        title: "Online Discussions"
+        top: "Top"
+        process: "Process"
+        design_architecture: "Design & Architecture"
+        coding: "Coding"
+        testing_qa: "Testing & QA"
+        monitoring: "Monitoring"
+      communities:
+        title:  "Local Meetups"
+        find_local_chapters: "Find Local Chapters"
+      help:
+        title: "Helpful Resources"
+        recipes: "Technical recipes"
+        about: "About the site"
+        contributors: "Contributors"
+        supporters: "Supporters"
+
+
+    topic:
+      actions:
+        make_toc: "TOC Topic"
+        remove_toc: "Remove TOC Topic"
+        make_recipe: "Recipe Topic"
+        remove_recipe: "Remove Recipe Topic"
+        make_section: "Section Topic"
+        remove_section: "Remove Section Topic"
+      comments_title: "Additional Comments"
+    cancel: "Cancel"
+
+    signin:
+      title: "Sign in"
+      username: "Username"
+      action: "Sign in"
+      external_login:
+        title: "Logging in with GitHub, Stack Overflow, or Google:"
+        description: "You can use alternate identity providers such as GitHub to log into your ContinuousSecurity.com account. To do this, you must use an account with the same email address as the one where you received your ContinuousSecurity invitation. If the email addresses match, simply select the appropriate button and enter your credentials as normal."
+      invitations:
+        title: "Lost invitations:"
+        description: "Invitations can easily be re-sent by your host, or you can request a new invitation by emailing paulen@sourceclear.com. Please specify an email address corresponding to your GitHub or Stack Overflow account if you wish to log in with either of these services."
+
+    create_account:
+      action: "Get Started"
+      title: "Create Account"
+    user:
+      fullname: "Full name"
+      overview: "Overview"
+      invitations: "Invitations"
+      discussions: "Discussions"
+      account:
+        title: "My account"
+
+    recipes: "Recipes"
+
+    forgot_password:
+      action: "Forgot Username and/or Password"
