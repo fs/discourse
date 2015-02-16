@@ -119,8 +119,8 @@ after_initialize do
   require(File.expand_path('../app/serializers/site_serializer', __FILE__))
   require(File.expand_path('../app/models/topic', __FILE__))
 
-  PreloadParts.preload
-  DiscourseReports::Part.update_part_constraints
+  #PreloadParts.preload
+  #DiscourseReports::Part.update_part_constraints
 
   Archetype.register('toc')
   Archetype.register('recipe')
